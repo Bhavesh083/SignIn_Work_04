@@ -1,0 +1,10 @@
+
+.yearDegree {
+    display: flex;
+    flex-direction: row;
+  }
+  @media (max-width: 415px) {
+  .signupDropdown2 {
+    width: 75%;
+  }
+  }
