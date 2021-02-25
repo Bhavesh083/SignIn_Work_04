@@ -1,0 +1,75 @@
+.right-form-body > label {
+    font-size: .875rem;
+    color: #201e27;
+    margin: 0 0 2%;
+    margin-top: .625rem;
+    font-weight: 600;
+    display: block;
+    line-height: 1.6;
+    max-width: 42em
+}
+  
+.right-form-body > input {
+    border-radius: .3125rem;
+    margin-bottom: 0.6rem;
+    width: 96%;
+    font-size: .875rem;
+    font-family: Inter;
+    padding: 10px;
+    outline: none;
+    caret-color: #48ccac;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease-in;
+    font-family: "Inter",sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+  
+.right-form-body > input:focus {
+    border: 2px solid #48ccac;
+}
+  
+.right-form-body > button {
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    background: #1a73e8;
+    padding: .625rem .75rem;
+    cursor: pointer;
+    border-radius: 5px;
+    max-width: 130px;
+    outline: none;
+    border: none;
+    display: block;
+    text-align: center;
+    transition: all 0.2s ease-in;
+}
+  
+ .right-form-body > button:disabled {
+    opacity: 0.7;
+}
+
+.modal__errors {
+    color: #e0133e;
+    width: 100%;
+    margin-top: 0.01em;
+    font-weight: bold;
+    font-size: .8rem;
+    display: flex;
+    align-items: center;
+}
+  
+.modal__errors > .MuiSvgIcon-root {
+    color: #e0133e !important;
+    font-size: 1.1rem !important;
+}
+.dec-pad{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: -23px;
+}
+  

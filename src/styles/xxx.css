@@ -1,0 +1,147 @@
+@media screen and (min-width : 415px) {
+
+.m-root-main {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+   position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-tap-highlight-color: transparent;
+} 
+
+@media screen and (min-width : 900px) {
+   .rad-main-box{
+     margin-left: 10%;
+     width: 80%;
+     margin: 0 auto;
+  }
+}
+@media print {
+    .main-root-one {
+      position: absolute !important;
+    } 
+  }
+  .m-s-box1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .MuiDialog-scrollBody {
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: center;
+  }
+  .MuiDialog-scrollBody:after {
+    width: 0;
+    height: 100%;
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .rad-main-box  {
+    height: 100%;
+    outline: 0;
+  }
+  @media print {
+    .rad-main-box {
+      height: auto;
+    }
+  }
+  .md-p {
+    margin: 32px;
+    position: relative;
+    overflow-y: auto;
+  }
+  @media print {
+    .md-p {
+      box-shadow: none;
+      overflow-y: visible;
+    }
+  }
+  .md-p-sp {
+    display: flex;
+    max-height: calc(100% - 64px);
+    flex-direction: column;
+  }
+  .md-p-sb {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+  }
+  .MuiDialog-paperWidthFalse {
+    max-width: calc(100% - 64px);
+  }
+  .MuiDialog-paperWidthXs {
+    max-width: 444px;
+  }
+  @media (max-width:507.95px) {
+    .MuiDialog-paperWidthXs .md-p-sb {
+      max-width: calc(100% - 64px);
+    }
+  }
+  .md-p-ws {
+    max-width: 600px;
+  }
+  @media (max-width:663.95px) {
+    .md-p-ws .md-p-sb {
+      max-width: calc(100% - 64px);
+    }
+  }
+  .MuiDialog-paperWidthMd {
+    max-width: 960px;
+  }
+  @media (max-width:1023.95px) {
+    .MuiDialog-paperWidthMd  .md-p-sb {
+      max-width: calc(100% - 64px);
+    }
+  }
+  .MuiDialog-paperWidthLg {
+    max-width: 1280px;
+  }
+  @media (max-width:1343.95px) {
+    .MuiDialog-paperWidthLg   .md-p-sb {
+      max-width: calc(100% - 64px);
+    }
+  }
+  .MuiDialog-paperWidthXl {
+    max-width: 1920px;
+  }
+  @media (max-width:1983.95px) {
+    .MuiDialog-paperWidthXl .MuiDialog-paperScrollBody {
+      max-width: calc(100% - 64px);
+    }
+  }
+  .MuiDialog-paperFullWidth {
+    width: calc(100% - 64px);
+  }
+  .md-p-fs {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    max-width: 100%;
+    max-height: none;
+    border-radius: 0;
+  }
+  .md-p-fs .md-p-sb {
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .mp-main-one-box {
+    color: rgba(0, 0, 0, 0.87);
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12);
+ 
+  }
+  .MuiPaper-rounded {
+    
+  }
+  .MuiPaper-outlined {
+    
+  }
+  .MuiPaper-elevation24 {
+     }
+}  
