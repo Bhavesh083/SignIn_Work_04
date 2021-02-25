@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/SignIn_Work_04/static/css/main.293c6c2d.chunk.css",
+    "main.js": "/SignIn_Work_04/static/js/main.fe0df019.chunk.js",
+    "main.js.map": "/SignIn_Work_04/static/js/main.fe0df019.chunk.js.map",
+    "runtime-main.js": "/SignIn_Work_04/static/js/runtime-main.0626f14f.js",
+    "runtime-main.js.map": "/SignIn_Work_04/static/js/runtime-main.0626f14f.js.map",
+    "static/js/2.237d55f4.chunk.js": "/SignIn_Work_04/static/js/2.237d55f4.chunk.js",
+    "static/js/2.237d55f4.chunk.js.map": "/SignIn_Work_04/static/js/2.237d55f4.chunk.js.map",
+    "index.html": "/SignIn_Work_04/index.html",
+    "static/css/main.293c6c2d.chunk.css.map": "/SignIn_Work_04/static/css/main.293c6c2d.chunk.css.map",
+    "static/js/2.237d55f4.chunk.js.LICENSE.txt": "/SignIn_Work_04/static/js/2.237d55f4.chunk.js.LICENSE.txt",
+    "static/media/Main.css": "/SignIn_Work_04/static/media/modal-mobile.d1800529.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0626f14f.js",
+    "static/js/2.237d55f4.chunk.js",
+    "static/css/main.293c6c2d.chunk.css",
+    "static/js/main.fe0df019.chunk.js"
+  ]
+}
