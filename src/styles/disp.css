@@ -6,6 +6,10 @@
     right: 0;
     bottom: 0;
    position: fixed;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   z-index: -1;
     background-color: rgba(0, 0, 0, 0.5);
     -webkit-tap-highlight-color: transparent;
 } 
@@ -27,7 +31,7 @@
     align-items: center;
     justify-content: center;
   }
-  .MuiDialog-scrollBody {
+  .md-sb {
     overflow-x: hidden;
     overflow-y: auto;
     text-align: center;

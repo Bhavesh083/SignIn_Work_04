@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 :root {
   --main-text-color: hsla(230, 10%, 30%, 1);
 }
@@ -289,7 +290,7 @@
          
       }
       .main .rad-main-box {
-        margin-top: 2.5%;
+        margin-top: 0.5%;
           max-height: 95%;
       }
       .right-sec-main-content{
@@ -305,10 +306,10 @@
   }
   @media (min-width: 1550px) and (max-width: 1849px) {
       .main{
-          margin-top: 5%;
+          margin-top: 0%;
       }
       .main .rad-main-box {
-        margin-top: 2%;
+        margin-top: 0.5%;
         max-height: 190%;
     }
     .right-sec-main-content{
@@ -322,7 +323,7 @@
     .main .rad-main-box {
         min-height: 30rem;
         height : 90%;
-        margin-top: 2rem;
+        margin-top: 0rem;
     }
     .right-sec-main-content{
         padding-top: 8rem;
@@ -341,7 +342,7 @@
       .main .rad-main-box{
         min-height: 30rem;
         height : 80%;
-        margin-top: 4rem;
+        margin-top: 0rem;
       }
       .right-sec-main-content{
           padding-top: 6.6rem;
@@ -355,7 +356,7 @@
         min-height: 30rem;
         height: 43rem;
         max-height: 40rem;
-        margin-top: 2.5rem;
+        margin-top: 0rem;
       }
       .main .r-f-b-button {
         margin-top: 0;
@@ -378,7 +379,7 @@
   }
   @media (max-width: 1299px) and (min-width: 1101px) and (min-height: 1000px) {
       .main .rad-main-box{
-          margin-top: 5rem;
+          margin-top: 0rem;
       }
       .right-sec-main-content {
         padding-top: 7.5rem;
@@ -400,7 +401,7 @@
     .main .rad-main-box{
         min-height: 30rem;
         height: 43rem;
-        margin-top: 5rem;
+        margin-top: 0rem;
         max-height: 93%;
       }
       .right-sec-main-content{
@@ -434,7 +435,7 @@
         min-height: 10rem;
         height: 95%;
         max-height: 60rem;
-        margin-top: 1rem;
+        margin-top: 0rem;
       }
       .info-box-body {
         padding-top: 0rem;
@@ -456,7 +457,7 @@
         min-height: 10rem;
         height: 95%;
         max-height: 50rem;
-        margin-top: 5rem;
+        margin-top: 0rem;
       }
       .visiblity {
         left: 95%;
@@ -472,7 +473,7 @@
         min-height: 10rem;
         height: 95%;
         max-height: 50rem;
-        margin-top: 1rem;
+        margin-top: 0rem;
       }
       .visiblity{
         left: 95%;
@@ -494,7 +495,7 @@
         padding: 20px;
       }
       .rad-main-box{
-        margin-top: 8rem;
+        margin-top: 0rem;
       }
       .right-sec-main-content{
         padding-top: 4rem;
@@ -508,7 +509,6 @@
         left: 95%;
       }
       .right-sec {
-        
         width: 90%;
         margin: 20px auto;
         padding: 20px;

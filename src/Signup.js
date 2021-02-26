@@ -2,32 +2,59 @@ import React,{useState} from 'react';
 import {useForm} from 'react-hook-form';
 import {useDispatch} from 'react-redux';
 import { accAdd } from './action/formaction'
+
+//styles:- 
 import './styles/Main.css';
 import './styles/disp.css';
 import './styles/HomeComponent-new.css';
 import './styles/ModalForm.css';
 import './styles/Discover.css';
 import './styles/dashboard.css';
-import './styles/secpart.css'; 
+//import './styles/secpart.css'; 
+
+
+
 
 function Signup() { 
 
 
     const [comp, setComp] = useState(true);
+    const [showPass, setShowPass] = useState(false);
+
     const dispatch = useDispatch();
+     
+    //      Form dfn :-
     const {register,handleSubmit,watch,errors} = useForm();
+    const {register:register2,handleSubmit:handleSubmit2,watch:watch2,errors:errors2} = useForm();
     
+    //      Getting form details :-
     const onSubmit = (data) => {
         console.log(data);
         dispatch(accAdd(data.fullname,data.email,data.password));
         setComp(false);
     }
+
+    const onSubmitDetails = (det) => {
+        console.log(det);
+        dispatch(accAdd(det.college , det.date , det.degree , det.major));
+    }
     
+    const showPas = () => {
+        setShowPass(!showPass);
+    }
+    // Back button operation :-
+    const goBack = () =>{
+        setComp(true);
+    }
+
 
 
 
 
     return (    
+    
+   <div>     
+    { comp ?
     <div className='main-root-one  main'>
         <div className='m-root-main'>
            <div className='rad-main-box  m-s-box1'>
@@ -44,7 +71,7 @@ function Signup() {
                              <svg  className="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
                              <path d="M18.3 5.71a.9959.9959 0 00-1.41 0L12 10.59 7.11 5.7a.9959.9959 0 00-1.41 0c-.39.39-.39 1.02 0 1.41L10.59 12 5.7 16.89c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L12 13.41l4.89 4.89c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"></path>
                              </svg>
-                          {comp?  <div> 
+                            <div> 
                             <div className='right-sec-main-content'>
                                     <div className='r-s-google'>
                                     <img src='https://github.com/Bhavesh083/SignIn_Work_04/blob/main/src/images/Google-logo.png?raw=true'/>
@@ -70,7 +97,11 @@ function Signup() {
                                              </p>}
                                              <label>Password</label>
                                              <input name='password'  placeholder='Enter Password' type='password' ref={register({required:true})} />
-                                             <svg  className="MuiSvgIcon-root visiblity" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"></path></svg>
+                                             <svg onClick={()=>showPas()}  className="MuiSvgIcon-root visiblity" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                                               { showPass ?
+                                               <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"></path>
+                                            :  <path d="M12 7c2.76 0 5 2.24 5 5 0 .65-.13 1.26-.36 1.83l2.92 2.92c1.51-1.26 2.7-2.89 3.43-4.75-1.73-4.39-6-7.5-11-7.5-1.4 0-2.74.25-3.98.7l2.16 2.16C10.74 7.13 11.35 7 12 7zM2 4.27l2.28 2.28.46.46C3.08 8.3 1.78 10.02 1 12c1.73 4.39 6 7.5 11 7.5 1.55 0 3.03-.3 4.38-.84l.42.42L19.73 22 21 20.73 3.27 3 2 4.27zM7.53 9.8l1.55 1.55c-.05.21-.08.43-.08.65 0 1.66 1.34 3 3 3 .22 0 .44-.03.65-.08l1.55 1.55c-.67.33-1.41.53-2.2.53-2.76 0-5-2.24-5-5 0-.79.2-1.53.53-2.2zm4.31-.78l3.15 3.15.02-.16c0-1.66-1.34-3-3-3l-.17.01z"></path>
+                                             }</svg>
                                              {errors.password && <p className='modal__errors dec-pad'>
                                                  <svg className="MuiSvgIcon-root " focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg>
                                                  Please enter your password
@@ -85,22 +116,45 @@ function Signup() {
                                  <p>Already have an account?<span>Log In</span></p>
                                 </div> 
                           </div>
+                        </div>
+                    </div>
+               </div>
+            </div> 
+        </div>
+    </div>
 
-                           :
+
+    : /////       Details PAGE :-     /////
 
 
-                            <div className='modal__content3'>
-                                <form className='modal__form form2'>
+    <div className='main-root-one  main'>
+        <div className='m-root-main'>
+           <div className='rad-main-box  m-s-box1'>
+               <div className='mp-main-one-box md-p md-p-sp  md-p-fs'>
+                    <div className='main-box'>
+                        <div className='left-sec'>
+                            <img src='https://raw.githubusercontent.com/Bhavesh083/SignIn_Work_04/c762b8b2d187a1321ea6b5cfe7cc60b2fd47e9c9/src/images/modal-logo.svg' /> 
+                            <div className='left-content'>
+                                <p className='left-content-welcome'>Welcome Back</p>
+                                <p className='left-content-signin'>Sign in to continue</p>
+                            </div>
+                        </div>
+                        <div className='right-sec'>
+                             <svg  className="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                             <path d="M18.3 5.71a.9959.9959 0 00-1.41 0L12 10.59 7.11 5.7a.9959.9959 0 00-1.41 0c-.39.39-.39 1.02 0 1.41L10.59 12 5.7 16.89c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L12 13.41l4.89 4.89c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"></path>
+                             </svg>
+                             <div className='modal__content3'>
+                                <form className='modal__form form2' onSubmit={handleSubmit2(onSubmitDetails)}>
                                     <label className='newLabel'>College</label>
-                                    <input className='college_field' placeholder='Enter Colege Name' type='text' name='college' />
-                                    <p className='modal__errors'>
+                                    <input className='college_field' placeholder='Enter Colege Name' type='text' name='college' ref={register2({required:true})} />
+                                    {errors2.college && <p className='modal__errors'>
                                                  <svg className="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" ><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg>
-                                                 Full Name is required</p>
+                                                 College Name is required</p>}
                                     <div className='yearDegree'>
                                         <div>
                                             <label className='newLabel'>Graduation Year</label>
-                                            <select placeholder='Select Year' className='signupDropdown2' type='text' name='date'>
-                                                <option className='option__heading disabled'>Graduation Year</option>
+                                            <select name='date' className='signupDropdown2' type='text'  ref={register2({required:true})}>
+                                                <option className='option__heading disabled'>Select Graduation Year</option>
                                                 <option className='signupOption' value='Fall 2024'>Fall 2024</option>
                                                 <option className='signupOption' value='Fall 2024'>Spring 2024</option>
                                                 <option className='signupOption' value='Fall 2023'>Fall 2023</option>
@@ -114,13 +168,13 @@ function Signup() {
                                                 <option className='signupOption' value='Fall 2019'>2019</option>
                                                 <option className='signupOption' value='Fall 2018'>2018</option>
                                             </select>
-                                            <p className='modal__errors'>
+                                            {errors2.date && <p className='modal__errors'>
                                                  <svg className="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" ><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg>
-                                                 Full Name is required</p>
+                                                 Graduation Date is required</p>}
                                         </div>
                                         <div className='degreeContainer'>
                                             <label className='newLabel'>Degree</label>
-                                            <select className='Degree' placeholder='Enter Degree Name' type='text' name='degree'  > 
+                                            <select  className='Degree' placeholder='Enter Degree Name' type='text' name='degree' ref={register2({required:true})}  > 
                                                 <option className='option__heading disabled'>Select Degree Name</option>
                                                 <option className='signupOption' value='BTech'>BTech</option>
                                                 <option className='signupOption' value='BSc'>BSc</option>
@@ -131,32 +185,32 @@ function Signup() {
                                                 <option className='signupOption' value='BFA'>BFA</option>
                                                 <option className='signupOption' value='BE'>BE</option>
                                             </select>
-                                            <p className='modal__errors'>
+                                            {errors2.degree && <p className='modal__errors'>
                                                  <svg className="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" ><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg>
-                                                 Full Name is required</p>
+                                                 Degree is required</p>}
                                         </div>
                                     </div> 
                                     <label className='newLabel'>Major</label>
-                                    <input placeholder='Enter Major Name' type="text" name='major' />
-                                    <p className='modal__errors'>
+                                    <input placeholder='Enter Major Name' type="text" name='major' ref={register2({required:true})} />
+                                    {errors2.major && <p className='modal__errors'>
                                                  <svg className="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" ><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg>
-                                                 Full Name is required</p>
+                                                 Major is required</p>}
                                     <div className="buttons">
-                                        <button className='signupButton2' type='button'  >Back</button>
+                                        <button onClick={()=>goBack()} className='signupButton2' type='button'>Back</button>
                                         <button className='signupButton' type='submit'>Signup</button>
                                     </div>
                                 </form>
-                            </div>
-
-
-
-                        }
+                            </div> 
                         </div>
                     </div>
-               </div>
-            </div> 
+                </div>
+            </div>                
         </div>
     </div>
+     }
+ </div>
+
+
     )
 }
 

@@ -97,5 +97,69 @@ function App() {
   export default App;
   <div className='main-root-one  main'>
          <div className='m-root-main'>
-          <div className='rad-main-box  m-s-box1'>
+          < className='rad-main-box  m-s-box1'>
            <div className='mp-main-one-box md-p md-p-sp  md-p-fs'></div>
+
+
+
+
+           /////////////////////////////
+
+           <div className='modal__content3'>
+                                <form className='modal__form form2' onSubmit={handleSubmit2(onSubmitDetails)}>
+                                    <label className='newLabel'>College</label>
+                                    <input className='college_field' placeholder='Enter Colege Name' type='text' name='college' ref={register2({required:true})} />
+                                    {errors2.college && <p className='modal__errors'>
+                                                 <svg className="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" ><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg>
+                                                 College Name is required</p>}
+                                    <div className='yearDegree'>
+                                        <div>
+                                            <label className='newLabel'>Graduation Year</label>
+                                            <select name='date' className='signupDropdown2' type='text'  ref={register2({required:true})}>
+                                                <option className='option__heading disabled'>Select Graduation Year</option>
+                                                <option className='signupOption' value='Fall 2024'>Fall 2024</option>
+                                                <option className='signupOption' value='Fall 2024'>Spring 2024</option>
+                                                <option className='signupOption' value='Fall 2023'>Fall 2023</option>
+                                                <option className='signupOption' value='Fall 2023'>Spring 2023</option>
+                                                <option className='signupOption' value='Fall 2022'>Fall 2022</option>
+                                                <option className='signupOption' value='Fall 2022'>Spring 2022</option>
+                                                <option className='signupOption' value='Fall 2021'>Fall 2021</option>
+                                                <option className='signupOption' value='Fall 2021'>Spring 2021</option>
+                                                <option className='signupOption' value='Fall 2020'>Fall 2020</option>
+                                                <option className='signupOption' value='Fall 2020'>Spring 2020</option>
+                                                <option className='signupOption' value='Fall 2019'>2019</option>
+                                                <option className='signupOption' value='Fall 2018'>2018</option>
+                                            </select>
+                                            {errors2.date && <p className='modal__errors'>
+                                                 <svg className="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" ><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg>
+                                                 Graduation Date is required</p>}
+                                        </div>
+                                        <div className='degreeContainer'>
+                                            <label className='newLabel'>Degree</label>
+                                            <select  className='Degree' placeholder='Enter Degree Name' type='text' name='degree' ref={register2({required:true})}  > 
+                                                <option className='option__heading disabled'>Select Degree Name</option>
+                                                <option className='signupOption' value='BTech'>BTech</option>
+                                                <option className='signupOption' value='BSc'>BSc</option>
+                                                <option className='signupOption' value='BBA'>BBA</option>
+                                                <option className='signupOption' value='BA'>BA</option>
+                                                <option className='signupOption' value='Bcom'>Bcom</option>
+                                                <option className='signupOption' value='BCA'>BCA</option>
+                                                <option className='signupOption' value='BFA'>BFA</option>
+                                                <option className='signupOption' value='BE'>BE</option>
+                                            </select>
+                                            {errors2.degree && <p className='modal__errors'>
+                                                 <svg className="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" ><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg>
+                                                 Degree is required</p>}
+                                        </div>
+                                    </div> 
+                                    <label className='newLabel'>Major</label>
+                                    <input placeholder='Enter Major Name' type="text" name='major' ref={register2({required:true})} />
+                                    {errors2.major && <p className='modal__errors'>
+                                                 <svg className="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" ><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg>
+                                                 Major is required</p>}
+                                    <div className="buttons">
+                                        <button onClick={()=>goBack()} className='signupButton2' type='button'>Back</button>
+                                        <button className='signupButton' type='submit'>Signup</button>
+                                    </div>
+                                </form>
+                            </div>
