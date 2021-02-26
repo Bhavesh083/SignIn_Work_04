@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/SignIn_Work_04/static/css/main.7f4b9f45.chunk.css",
-    "main.js": "/SignIn_Work_04/static/js/main.46afa54b.chunk.js",
-    "main.js.map": "/SignIn_Work_04/static/js/main.46afa54b.chunk.js.map",
+    "main.css": "/SignIn_Work_04/static/css/main.da7b327f.chunk.css",
+    "main.js": "/SignIn_Work_04/static/js/main.4b8d7850.chunk.js",
+    "main.js.map": "/SignIn_Work_04/static/js/main.4b8d7850.chunk.js.map",
     "runtime-main.js": "/SignIn_Work_04/static/js/runtime-main.0626f14f.js",
     "runtime-main.js.map": "/SignIn_Work_04/static/js/runtime-main.0626f14f.js.map",
     "static/js/2.f3e47da0.chunk.js": "/SignIn_Work_04/static/js/2.f3e47da0.chunk.js",
     "static/js/2.f3e47da0.chunk.js.map": "/SignIn_Work_04/static/js/2.f3e47da0.chunk.js.map",
     "index.html": "/SignIn_Work_04/index.html",
-    "static/css/main.7f4b9f45.chunk.css.map": "/SignIn_Work_04/static/css/main.7f4b9f45.chunk.css.map",
+    "static/css/main.da7b327f.chunk.css.map": "/SignIn_Work_04/static/css/main.da7b327f.chunk.css.map",
     "static/js/2.f3e47da0.chunk.js.LICENSE.txt": "/SignIn_Work_04/static/js/2.f3e47da0.chunk.js.LICENSE.txt",
     "static/media/Main.css": "/SignIn_Work_04/static/media/modal-mobile.d1800529.png"
   },
   "entrypoints": [
     "static/js/runtime-main.0626f14f.js",
     "static/js/2.f3e47da0.chunk.js",
-    "static/css/main.7f4b9f45.chunk.css",
-    "static/js/main.46afa54b.chunk.js"
+    "static/css/main.da7b327f.chunk.css",
+    "static/js/main.4b8d7850.chunk.js"
   ]
 }
