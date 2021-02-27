@@ -5,10 +5,14 @@ import { useSelector } from 'react-redux';
 import { accAdd } from './action/formaction'
 
 //styles:- 
-import './styles/Main.css';
-import './styles/disp.css';
-import './styles/HomeComponent-new.css';
-import './styles/ModalForm.css';
+//import './styles/Main2.css';     
+import './styles/disp2.css';
+import './styles/HomeComponent-new2.css';
+import './styles/ModalForm2.css';
+import './styles/others.css';
+import './styles/Discover2.css';
+import './styles/NewProfile2.css';
+import './styles/Events2.css';
 
  
 
@@ -69,44 +73,51 @@ function Signup() {
     }
    
  
+
+
+
     return (    
     
+
+
+
+
    <div>     
-    { comp ? ///// Front Page:-
-    <div className='main-root-one  main'>
-        <div className='m-root-main'>
-           <div className='rad-main-box  m-s-box1'>
-               <div className='mp-main-one-box md-p md-p-sp  md-p-fs'>
-                    <div className='main-box'>
-                        <div className='left-sec'>
+    { comp ? ///// Front Page:- 
+    <div className='MuiDialog-root modal modal'>
+        <div className='MuiBackdrop-root'></div>
+        <div tabIndex="0" data-test="sentine1Start"></div>    
+           <div className='MuiDialog-container MuiDialog-scrollPaper'>
+               <div className='MuiPaper-root MuiDialog-paper MuiDialog-paperScrollPaper MuiDialog-paperWidthSm MuiDialog-paperFullScreen MuiPaper-elevation24 MuiPaper-rounded '>
+                    <div className='modal__container'>
+                        <div className='modal__sec1'>
                             <img alt='icon-company' src='https://raw.githubusercontent.com/Bhavesh083/SignIn_Work_04/c762b8b2d187a1321ea6b5cfe7cc60b2fd47e9c9/src/images/modal-logo.svg' /> 
-                            <div className='left-content'>
-                                <p className='left-content-welcome'>Welcome Back</p>
-                                <p className='left-content-signin'>Sign in to continue</p>
+                            <div className='modal__content'>
+                                <p className='modal__welcome'>Welcome Back</p>
+                                <p className='modal__signIn'>Sign in to continue</p>
                             </div>
                         </div>
-                        <div className='right-sec'>
+                        <div className='modal__sec2'>
                              <svg  className="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
                              <path d="M18.3 5.71a.9959.9959 0 00-1.41 0L12 10.59 7.11 5.7a.9959.9959 0 00-1.41 0c-.39.39-.39 1.02 0 1.41L10.59 12 5.7 16.89c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L12 13.41l4.89 4.89c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"></path>
-                             </svg>
-                            <div> 
-                            <div className='right-sec-main-content'>
-                                    <div className='r-s-google'>
+                             </svg> 
+                            <div className='modal__content2'>
+                                    <div className='google__login'>
                                     <img alt='google-icon' src='https://github.com/Bhavesh083/SignIn_Work_04/blob/main/src/images/Google-logo.png?raw=true'/>
                                     <p>Continue with Google</p>
                                     </div>
-                                    <div className='sec-seperator'>
+                                    <div className='modal__seperator'>
                                     <hr></hr>
                                     <p>or</p>
                                     <hr></hr>
                                     </div>
-                                    <div className='right-form'>
-                                        <form className='right-form-body' onSubmit={handleSubmit(onSubmit)} >
+                                    <div className='home__modal'> 
+                                        <form className='modal__form' onSubmit={handleSubmit(onSubmit)} >
                                              <label>Your Full Name</label>
                                              <input value={user.fullname} onChange={(e)=>buttonOn1(e)} name='fullname' placeholder='Enter Your Full Name' type='text'  ref={register({required:true})} />
                                              {errors.fullname && <p className='modal__errors'>
                                                  <svg className="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" ><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg>
-                                                 Full Name is required</p>}
+                                                 Full name is required</p>}
                                              <label>Your Email Address</label>
                                              <input value={user.email} onChange={(e)=>buttonOn2(e)}  name='email' placeholder='Enter Email Address' type='email'  ref={register({required:true})}   />
                                              {errors.email && <p className='modal__errors'>
@@ -116,7 +127,7 @@ function Signup() {
                                              <label>Password</label>
                                              <input value={user.password} onChange={(e)=>buttonOn3(e)}  name='password'  placeholder='Enter Password' type={passwordshown ? 'text' : 'password'}  ref={register({required:true,
                                                 pattern : { 
-                                                value : /^(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9]).{8,}$/ ,
+                                                value : /^(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9])(?=.*[!@#$%^&*_-]).{8,}$/ ,   
                                                 message: "Your password must have at least one of each of the following: uppercase character (A-Z), lowercase character (a-z), digit (0-9), and symbol (any non-alphanumeric character)", 
                                             } 
                                             })} />
@@ -133,11 +144,11 @@ function Signup() {
                                                  <svg className="MuiSvgIcon-root " focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg>
                                                  Please enter your password
                                              </p>}
-                                             {onButton? <button className='r-f-b-button'>Next</button>:<button className='disabled'>Next</button>}
+                                             {onButton? <button className='home__login'>Next</button>:<button className='dishome__login'>Next</button>}
                                         </form>
-                                    </div>
+                                    </div> 
                                 </div>
-                                <div className='info-box-body'>
+                                <div className='modal__contentbottom'>
                                  <hr></hr>
                                  <p>By signing up, you're agreeing to our <span> Terms of Use </span></p>
                                  <p>Already have an account? <span> Log In </span></p>
@@ -145,35 +156,35 @@ function Signup() {
                           </div>
                         </div>
                     </div>
+                    <div tabIndex="0" data-test="sentine1End"></div>    
                </div>
             </div> 
-        </div>
-    </div> 
 
 
     :        ///// Second PAGE :-
 
  
-    <div className='main-root-one  main'>
-        <div className='m-root-main'>
-           <div className='rad-main-box  m-s-box1'>
-               <div className='mp-main-one-box md-p md-p-sp  md-p-fs'>
-                    <div className='main-box'>
-                        <div className='left-sec'>
+   <div className='MuiDialog-root modal modal' >
+    <div className='MuiBackdrop-root'></div>
+      <div tabIndex="0" data-test="sentine1Start"></div>    
+       <div className='MuiDialog-container MuiDialog-scrollPaper'>
+           <div className='MuiPaper-root MuiDialog-paper MuiDialog-paperScrollPaper MuiDialog-paperWidthSm MuiDialog-paperFullScreen MuiPaper-elevation24 MuiPaper-rounded '>
+                <div className='modal__container modal__container2'>
+                        <div className='modal__sec1 modal__sec1__verify'>
                             <img alt='icon-company' src='https://raw.githubusercontent.com/Bhavesh083/SignIn_Work_04/c762b8b2d187a1321ea6b5cfe7cc60b2fd47e9c9/src/images/modal-logo.svg' /> 
-                            <div className='left-content'>
-                                <p className='left-content-welcome'>Welcome Back</p>
-                                <p className='left-content-signin'>Sign in to continue</p>
+                            <div className='modal__content'>
+                                <p className='modal__welcome'>Welcome Back</p>
+                                <p className='modal__signIn'>Sign in to continue.</p>
                             </div>
                         </div>
-                        <div className='right-sec'>
+                        <div className='modal__sec2'>
                              <svg  className="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
                              <path d="M18.3 5.71a.9959.9959 0 00-1.41 0L12 10.59 7.11 5.7a.9959.9959 0 00-1.41 0c-.39.39-.39 1.02 0 1.41L10.59 12 5.7 16.89c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L12 13.41l4.89 4.89c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"></path>
                              </svg>
                              <div className='modal__content3'>
                                 <form className='modal__form form2' onSubmit={handleSubmit2(onSubmitDetails)}>
                                     <label className='newLabel'>College</label>
-                                    <input onChange={(e)=>secbuttonOn1(e)} className='college_field' placeholder='Enter Colege Name' type='text' name='college' ref={register2({required:true})} />
+                                    <input onChange={(e)=>secbuttonOn1(e)} className='college_field' placeholder='Enter College Name' type='text' name='college' ref={register2({required:true})} />
                                     {errors2.college && <p className='modal__errors'>
                                                  <svg className="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" ><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg>
                                                  College Name is required</p>}
@@ -181,7 +192,7 @@ function Signup() {
                                         <div>
                                             <label className='newLabel'>Graduation Year</label>
                                             <select onChange={(e)=>secbuttonOn2(e)} name='date' className='signupDropdown2' type='text'  ref={register2({required:true})}>
-                                                <option className='option__heading' value='' hidden>Select Graduation Year</option>
+                                                <option className='option__heading' value='' hidden>Graduation Year</option>
                                                 <option className='signupOption' value='Fall 2024'>Fall 2024</option>
                                                 <option className='signupOption' value='Spring 2024'>Spring 2024</option>
                                                 <option className='signupOption' value='Fall 2023'>Fall 2023</option>
@@ -231,9 +242,9 @@ function Signup() {
                         </div>
                     </div>
                 </div>
-            </div>                
+                <div tabIndex="0" data-test="sentine1End"></div> 
+            </div>               
         </div>
-    </div>
      }
  </div>
 
