@@ -79,8 +79,7 @@ function Signup() {
                <div className='mp-main-one-box md-p md-p-sp  md-p-fs'>
                     <div className='main-box'>
                         <div className='left-sec'>
-                            <img alt='icon-company' src='https://raw.githubusercontent.com/Bhavesh083/SignIn_Work_04/c762b8b2d187a1321ea6b5cfe7cc60b2fd47e9c9/src/images/modal-logo.svg' /> 
-                            <div className='left-content'>
+                           <div className='left-content'>
                                 <p className='left-content-welcome'>Welcome Back</p>
                                 <p className='left-content-signin'>Sign in to continue</p>
                             </div>
@@ -160,7 +159,6 @@ function Signup() {
                <div className='mp-main-one-box md-p md-p-sp  md-p-fs'>
                     <div className='main-box'>
                         <div className='left-sec'>
-                            <img alt='icon-company' src='https://raw.githubusercontent.com/Bhavesh083/SignIn_Work_04/c762b8b2d187a1321ea6b5cfe7cc60b2fd47e9c9/src/images/modal-logo.svg' /> 
                             <div className='left-content'>
                                 <p className='left-content-welcome'>Welcome Back</p>
                                 <p className='left-content-signin'>Sign in to continue</p>
