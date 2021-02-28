@@ -84,11 +84,11 @@ function Signup() {
 
    <div>     
     { comp ? ///// Front Page:- 
-    <div className='MuiDialog-root modal modal'>
-        <div className='MuiBackdrop-root'></div>
+    <div className='comp-main  modal'>
+        <div className='bg-view'></div> 
         <div tabIndex="0" data-test="sentine1Start"></div>    
-           <div className='MuiDialog-container MuiDialog-scrollPaper'>
-               <div className='MuiPaper-root MuiDialog-paper MuiDialog-paperScrollPaper MuiDialog-paperWidthSm MuiDialog-paperFullScreen MuiPaper-elevation24 MuiPaper-rounded '>
+           <div className='comp-container comp-sp'>
+               <div className='c-root comp-p comp-psp comp-pws comp-pfs c-shadow c-radius '>
                     <div className='modal__container'>
                         <div className='modal__sec1'>
                             <img alt='icon-company' src='https://raw.githubusercontent.com/Bhavesh083/SignIn_Work_04/c762b8b2d187a1321ea6b5cfe7cc60b2fd47e9c9/src/images/modal-logo.svg' /> 
@@ -164,11 +164,11 @@ function Signup() {
     :        ///// Second PAGE :-
 
  
-   <div className='MuiDialog-root modal modal' >
-    <div className='MuiBackdrop-root'></div>
+   <div className='comp-main  modal' >
+    <div className='bg-view'></div>
       <div tabIndex="0" data-test="sentine1Start"></div>    
-       <div className='MuiDialog-container MuiDialog-scrollPaper'>
-           <div className='MuiPaper-root MuiDialog-paper MuiDialog-paperScrollPaper MuiDialog-paperWidthSm MuiDialog-paperFullScreen MuiPaper-elevation24 MuiPaper-rounded '>
+       <div className='comp-container comp-sp'>
+           <div className='c-root comp-p comp-psp comp-pws comp-pfs c-shadow c-radius '>
                 <div className='modal__container modal__container2'>
                         <div className='modal__sec1 modal__sec1__verify'>
                             <img alt='icon-company' src='https://raw.githubusercontent.com/Bhavesh083/SignIn_Work_04/c762b8b2d187a1321ea6b5cfe7cc60b2fd47e9c9/src/images/modal-logo.svg' /> 
