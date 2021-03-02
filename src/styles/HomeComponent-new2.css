@@ -578,7 +578,7 @@
   
   .verifyInput {
     width: 78% !important;
-    height: 16px;
+    height: 16px !important;
     margin-left: 11%;
     color: gray;
   }
@@ -1265,6 +1265,10 @@
     .google__login {
       margin-left: 0.6rem;
     }
+    .create-acc {
+      margin-top: 0.5rem !important;
+     padding: 0.5rem 0.7rem !important;
+   }
   
     .modal__contentbottom {
       width: 90%;
@@ -1339,6 +1343,10 @@
     .bottomVerifyDiv {
       padding-left: 4%;
       padding-right: 2%;
+    }
+    .create-acc {
+       margin-top: 0.5rem !important;
+      padding: 0.5rem 0.7rem !important;
     }
   
     .verify-button {
@@ -1465,6 +1473,7 @@
   .Degree {
     width: 107%;
   }
+  
   }
   
   
