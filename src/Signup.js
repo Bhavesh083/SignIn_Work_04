@@ -2,7 +2,7 @@ import React,{useState,useEffect} from 'react';
 import {useForm} from 'react-hook-form';
 import {useDispatch} from 'react-redux';
 import { useSelector } from 'react-redux';
-import { accAdd } from './action/formaction'
+import { accAdd } from './action/formaction';
 
 //styles:- 
 //import './styles/Main2.css';     
@@ -112,6 +112,7 @@ function Signup() {
 
 
    <div>     
+<<<<<<< HEAD
     { comp ? ///// Front Page:- 
     <div className='comp-main  modal'>
         <div className='bg-view'></div> 
@@ -124,6 +125,18 @@ function Signup() {
                             <div className='modal__content'>
                                 <p className='modal__welcome'>Welcome Back</p>
                                 <p className='modal__signIn'>Sign in to continue</p>
+=======
+    { comp ? ///// Front Page:-
+    <div className='main-root-one  main'>
+        <div className='m-root-main'>
+           <div className='rad-main-box  m-s-box1'>
+               <div className='mp-main-one-box md-p md-p-sp  md-p-fs'>
+                    <div className='main-box'>
+                        <div className='left-sec'>
+                           <div className='left-content'>
+                                <p className='left-content-welcome'>Welcome Back</p>
+                                <p className='left-content-signin'>Sign in to continue</p>
+>>>>>>> a1dc98e43ee4128e7e4baa818f046d4b1c5dbbde
                             </div>
                         </div>
                         <div className='modal__sec2'>
@@ -190,6 +203,7 @@ function Signup() {
     :        ///// Second PAGE :-
 
  
+<<<<<<< HEAD
   <div className='comp-main  modal' >
     <div className='bg-view'></div>
       <div tabIndex="0" data-test="sentine1Start"></div>    
@@ -201,6 +215,17 @@ function Signup() {
                             <div className='modal__content'>
                                 <p className='modal__welcome'>Welcome Back</p>
                                 <p className='modal__signIn'>Sign in to continue.</p>
+=======
+    <div className='main-root-one  main'>
+        <div className='m-root-main'>
+           <div className='rad-main-box  m-s-box1'>
+               <div className='mp-main-one-box md-p md-p-sp  md-p-fs'>
+                    <div className='main-box'>
+                        <div className='left-sec'>
+                            <div className='left-content'>
+                                <p className='left-content-welcome'>Welcome Back</p>
+                                <p className='left-content-signin'>Sign in to continue</p>
+>>>>>>> a1dc98e43ee4128e7e4baa818f046d4b1c5dbbde
                             </div>
                         </div>
                         <div className='modal__sec2'>
